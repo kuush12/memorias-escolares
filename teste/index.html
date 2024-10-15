@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário Escolar</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #061494;
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            font-style: italic;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Menu cascata */
+        nav {
+            display: block;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #000000;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #000000;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+        /* Seções principais - estilo de diário */
+        section {
+            padding: 20px;
+        }
+
+        .entrada-diario {
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .entrada-diario h2 {
+            font-size: 1.8em;
+            color: #080306;
+        }
+
+        .entrada-diario p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+
+        .data-diario {
+            font-style: italic;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .imagens img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #061494;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Diário Escolar</h1>
+    </header>
+
+    <!-- Menu Cascata -->
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Entradas</a>
+                <ul>
+                    <li><a href="#">Janeiro</a></li>
+                    <li><a href="#">Fevereiro</a></li>
+                    <li><a href="#">Março</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Fotos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seções principais -->
+    <section>
+        <div class="entrada-diario">
+            <div class="data-diario">Data: 01/03/2023</div>
+            <h2>Primeiro Dia de Aula</h2>
+            <p>Hoje foi o primeiro dia de aula e eu estava super animado(a)! Conheci meus novos professores e fiz alguns amigos. A sala de aula estava cheia, e o professor de Matemática fez uma breve apresentação do conteúdo que vamos estudar esse ano. Mal posso esperar para aprender mais!</p>
+        </div>
+
+        <div class="entrada-diario">
+            <div class="data-diario">Data: 15/03/2023</div>
+            <h2>Aula de Ciências</h2>
+            <p>A aula de Ciências de hoje foi muito interessante! Estudamos sobre o sistema solar e até assistimos a um vídeo incrível que mostrava os planetas em detalhes. Aprendi muitas coisas novas, como o tamanho de Júpiter e que Marte é chamado de "Planeta Vermelho".</p>
+            <div class="imagens">
+                <img src="caminho_para_sua_imagem.jpg" alt="Aula de Ciências">
+            </div>
+        </div>
+
+        <div class="entrada-diario">
+            <div class="data-diario">Data: 10/04/2023</div>
+            <h2>Excursão ao Museu</h2>
+            <p>Hoje fomos em uma excursão ao museu da cidade. Foi um passeio super legal, com muitas exposições sobre história e ciência. Fiz várias anotações e tirei muitas fotos para não esquecer os detalhes. Foi um dia inesquecível!</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        Colegio Padre Claudio Morelli - Bruno Rafael Wacherwski - Número da Chamada: 9
+    </footer>
+
+</body>
+</html>
