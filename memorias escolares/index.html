@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal de Memórias Escolares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1c05a0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0d3a8a;
+            border-radius: 5px;
+        }
+
+        .hero {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .hero-text {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .memorias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .memoria-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: 80%;
+            transition: transform 0.2s;
+        }
+
+        .memoria-card:hover {
+            transform: scale(1.02);
+        }
+
+        .imagens-memoria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .imagens-memoria img {
+            width: 200px; /* Largura das imagens aumentada */
+            height: auto; /* Mantém a proporção */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: transform 0.2s;
+        }
+
+        .imagens-memoria img:hover {
+            transform: scale(1.05);
+        }
+
+        .sobre-nos {
+            margin: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #1c05a0;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #1c05a0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #0d3a8a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Memórias <span style="color: #fafafa;">Escolares</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2 style="color: #1c05a0;">Bem-vindo ao nosso Jornal</h2>
+            <p style="color: #1c05a0;">Relembre os momentos mais marcantes da nossa vida escolar</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="memorias">
+            <h2>Destaques</h2>
+            <div class="memoria-card">
+                <h3>Passeio na Caverna</h3>
+                <p class="data"><strong>Data:</strong> 15 de Setembro, 2022</p>
+                <p class="descricao">Um dia na Gruta de Campinhos, passamos por dentro das cavernas e fizemos uma trilha pelos morros.</p>
+                <div class="imagens-memoria">
+                    <img src="caverna.jpg" alt="Foto da caverna 1">
+                    <img src="caverna2.jpg" alt="Foto da caverna 2">
+                    <img src="caverna3.jpg" alt="Foto da caverna 3">
+                </div>
+            </div>
+
+            <div class="memoria-card">
+                <h3>Memorial da Segurança do Transporte</h3>
+                <p class="data"><strong>Data:</strong> 20 de Novembro, 2021</p>
+                <p class="descricao">Um dia no memorial, tivemos um exemplo de como seria um capotamento de caminhão, batida de carro entre outras coisas.</p>
+                <div class="imagens-memoria">
+                    <img src="memorial.jpg" alt="Memorial da Segurança do Transporte 1">
+                    <img src="memorial2.jpg" alt="Memorial da Segurança do Transporte 2">
+                    <img src="barco.jpg" alt="Memorial da Segurança do Transporte 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="sobre-nos">
+            <div class="sobre-nos-content">
+                <h2>Sobre Nós</h2>
+                <p><strong>Nome do Colégio:</strong> Colégio Estadual Padre Cláudio Morelli</p>
+                <p><strong>Nome:</strong> Bruno Rafael Wacherwski</p>
+                <p><strong>Número:</strong> 9</p>
+                <p><strong>Turma:</strong> 3º E</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      
+        <p>Colégio Estadual Padre Cláudio Morelli | Bruno Rafael Wacherwski | Número: 9</p>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn">⬆</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onscroll = function() {
+            const btn = document.getElementById('scrollTopBtn');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
